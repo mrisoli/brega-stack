@@ -1,16 +1,16 @@
-name: Playwright Tests
+name: Unit Tests
 
 env:
   SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
   SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
   SESSION_SECRET: ${{ secrets.SESSION_SECRET }}
-  PLAYWRIGHT_CI: true
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
 jobs:
   test:
     timeout-minutes: 60
@@ -21,14 +21,6 @@ jobs:
       with:
         node-version: 19
     - name: Install dependencies
-      run: CI='' npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test
-    - uses: actions/upload-artifact@v3
-      if: always()
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
+      run: npm ci
+    - name: Run tests
+      run: npm run test
