@@ -1,6 +1,6 @@
 # Remix Brega Stack
 
-![Brega site image](https://user-images.githubusercontent.com/1952141/214353746-72e96113-a7a6-456b-b4bf-4a51ceaa104f.png)
+![Brega site image](https://user-images.githubusercontent.com/1952141/214359666-92d44b3c-6802-45e5-83a6-dbcfc15340ab.png)
 
 Deployed Site: [brega-stack.netlify.app](https://brega-stack.netlify.app)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/03d7a650-00a3-4f03-b786-661f7a7ab2a1/deploy-status)](https://app.netlify.com/sites/brega-stack/deploys)
